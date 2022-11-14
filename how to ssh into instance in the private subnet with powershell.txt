@@ -10,4 +10,4 @@ Get-Service ssh-agent
 # Now load your key files into the ssh-agent
 ssh-add C:\Users\Admin\my-ec2key.pem
 
-# SSH into the instance in the bastion host public subnet. Remember to allow agent forwarding
+# SSH into the instance (bastion host) in the public subnet. Remember to allow agent forwarding
