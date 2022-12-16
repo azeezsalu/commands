@@ -1,0 +1,22 @@
+Commands to SSH into an EC2 instance in the private subnet on a Mac computer
+
+To ssh into an instance in the private subnet using a mac computer, run the following commands from the directory you saved your private key pair.
+Please note that the following commands assume you are using an Amazon Linux instance. 
+
+Command 1:
+ssh-add --apple-use-keychain <the-name-of-your-private-key.pem>
+
+Example
+ssh-add --apple-use-keychain myec2key.pem
+
+Command 2:
+ssh -A ec2-user@<the-public-ipv4-ip-of-your-bastion-host>
+
+Example: 
+ssh -A ec2-user@54.162.137.241
+
+Command 3:
+ssh ec2-user@<the-private-ipv4-ip-of-the-instance-in-the-private-subnet>
+
+Example:
+ssh ec2-user@18.232.135.220
